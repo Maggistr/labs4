@@ -1,0 +1,23 @@
+# Gradle build output
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Generated files
+build-number.properties
+src/main/resources/build-passport.properties
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Gradle specific
+gradle-app.setting
+.gradletasknamecache
+bin/
+out/
