@@ -1,0 +1,17 @@
+# Maven build output
+target/
+.mvn/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven wrapper (оставляем только jar)
+.mvn/wrapper/maven-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE files (локальные для этого проекта)
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
