@@ -15,9 +15,15 @@ public class NotificationController {
     }
 
     @GetMapping("/notify")
-    public String notify(@RequestParam String message,
-                         @RequestParam String email,
+    public String notify(@RequestParam(required = false) String message,
+                         @RequestParam(defaultValue = "Не указан") String email,
                          @RequestParam(defaultValue = "customEmail") String via) {
+        if (message == null) {
+            message = "Сообщение пустое";
+        }
+        if (email.equals("Не указан")) {
+            message = "Укажите почту";
+        }
         notificationManager.notify(message, email, via);
         return "Уведомление отправлено через: " + via;
     }
