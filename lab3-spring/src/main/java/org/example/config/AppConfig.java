@@ -8,8 +8,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("org.example")
 public class AppConfig {
-    @Bean
-    public SmsService smsService() {
-        return new SmsService();
-    }
+
 }

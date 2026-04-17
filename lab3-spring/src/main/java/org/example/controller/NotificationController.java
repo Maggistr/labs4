@@ -22,7 +22,7 @@ public class NotificationController {
             message = "Сообщение пустое";
         }
         if (email.equals("Не указан")) {
-            message = "Укажите почту";
+            return "Укажите почту";
         }
         notificationManager.notify(message, email, via);
         return "Уведомление отправлено через: " + via;
